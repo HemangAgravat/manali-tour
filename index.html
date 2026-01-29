@@ -106,7 +106,7 @@
         /* Hero Section */
         .hero {
             background: linear-gradient(rgba(0, 51, 102, 0.6), rgba(0, 51, 102, 0.4)), 
-                        url('hero-bg.jpg');
+                        url('hero-bg.jpg'); /* Ensure this image exists in your folder */
             
             background-position: center center;
             background-repeat: no-repeat;
@@ -126,8 +126,8 @@
         .hero-content h1 {
             font-size: 3rem;
             margin-bottom: 10px;
-            color: #FFD700 !important; /* 'Important' forces the browser to use this color */
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.6); /* Adds shadow so yellow is readable */
+            color: #FFD700 !important;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
         }
 
         .hero-content p {
@@ -298,32 +298,29 @@
             margin-top: 20px;
         }
 
-        /* Package Inclusions & Exclusions */
-        .inclusions, .exclusions {
+        /* === PACKAGE LISTS (Inclusions, Exclusions, Terms) === */
+        
+        /* Shared spacing for all three sections */
+        .inclusions, .exclusions, .terms {
             padding: 50px 0;
         }
 
-        .inclusions ul, .exclusions ul {
-            list-style: disc;
-            padding-left: 20px;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .inclusions ul li, .exclusions ul li {
-            margin-bottom: 10px;
-        }
-
-        /* Terms & Conditions */
+        /* Terms specific: Add grey background */
         .terms {
-            padding: 50px 0;
             background-color: #f9f9f9;
         }
 
-        .terms p {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: justify;
+        /* Shared styling for the Bullet Lists */
+        .inclusions ul, .exclusions ul, .terms ul {
+            list-style: disc;       /* Standard bullet points */
+            padding-left: 20px;     /* Indent bullets */
+            max-width: 600px;       /* Limit width for readability */
+            margin: 0 auto;         /* Center the list on screen */
+        }
+
+        /* Space between items */
+        .inclusions ul li, .exclusions ul li, .terms ul li {
+            margin-bottom: 10px;
         }
 
         /* Contact & Footer */
@@ -615,7 +612,7 @@
         </div>
     </section>
 
-  <section class="terms">
+    <section class="terms">
         <div class="container">
             <h2>Terms & Conditions</h2>
             <ul>
@@ -665,4 +662,3 @@
     </script>
 </body>
 </html>
-
