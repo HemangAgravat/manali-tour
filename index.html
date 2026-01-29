@@ -106,7 +106,7 @@
         /* Hero Section */
         .hero {
             background: linear-gradient(rgba(0, 51, 102, 0.6), rgba(0, 51, 102, 0.4)), 
-                        url('hero-bg.jpg'); /* Ensure this image exists in your folder */
+                        url('hero-manali.jpg'); 
             
             background-position: center center;
             background-repeat: no-repeat;
@@ -300,9 +300,15 @@
 
         /* === PACKAGE LISTS (Inclusions, Exclusions, Terms) === */
         
-        /* Shared spacing for all three sections */
+        /* Shared spacing */
         .inclusions, .exclusions, .terms {
             padding: 50px 0;
+        }
+
+        /* ALIGNMENT FIX: Center the headings for these sections to match the lists */
+        .inclusions h2, .exclusions h2, .terms h2 {
+            text-align: center;
+            margin-bottom: 30px;
         }
 
         /* Terms specific: Add grey background */
@@ -310,12 +316,13 @@
             background-color: #f9f9f9;
         }
 
-        /* Shared styling for the Bullet Lists */
+        /* Shared styling for the Bullet Lists (Centers the block) */
         .inclusions ul, .exclusions ul, .terms ul {
             list-style: disc;       /* Standard bullet points */
             padding-left: 20px;     /* Indent bullets */
             max-width: 600px;       /* Limit width for readability */
-            margin: 0 auto;         /* Center the list on screen */
+            margin: 0 auto;         /* Center the list block on screen */
+            text-align: left;       /* Keep the text left-aligned inside the block */
         }
 
         /* Space between items */
@@ -645,7 +652,6 @@
         document.querySelectorAll('.accordion-header').forEach(button => {
             button.addEventListener('click', () => {
                 const content = button.nextElementSibling;
-                // Toggle active class for smooth display handling
                 content.classList.toggle('active');
             });
         });
