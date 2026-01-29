@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maa Sonal Holidays - Gujarat to Manali Super Saver Tour</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h1, h2, h3 {
+            color: #003366; /* Navy Blue */
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background-color: #FFD700; /* Yellow accent */
+            color: #003366;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+
+        .cta-btn:hover {
+            background-color: #87CEEB; /* Sky Blue on hover */
+        }
+
+        /* Header & Navbar */
+        .header {
+            position: sticky;
+            top: 0;
+            background-color: #003366;
+            z-index: 1000;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        .logo h1 {
+            color: #FFD700;
+            font-size: 1.5rem;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-menu li {
+            margin-left: 20px;
+        }
+
+        .nav-menu a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: #FFD700;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .bar {
+            width: 25px;
+            height: 3px;
+            background-color: #fff;
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+
+        /* Hero Section */
+        /* Update this section in your <style> tag */
+.hero {
+    /* 1. The linear-gradient creates a black see-through layer (0.5 opacity) 
+          so your white text pops out.
+       2. Replace 'hero-manali.jpg' with your actual downloaded image name.
+    */
+    background: linear-gradient(rgba(0, 51, 102, 0.6), rgba(0, 51, 102, 0.4)), 
+                url('images/bg.jpg');
+    
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover; /* Ensures image covers full area */
+    background-attachment: fixed; /* Creates a cool "parallax" scrolling effect */
+    
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .route {
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            margin-top: 20px;
+            font-size: 1.1rem;
+        }
+
+        /* Tour Overview */
+        .overview {
+            padding: 50px 0;
+            background-color: #f9f9f9;
+        }
+
+        .overview-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .overview-text h2 {
+            margin-bottom: 20px;
+        }
+
+        .overview-image img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        /* Places Covered */
+        .places {
+            padding: 50px 0;
+        }
+
+        .places-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .place-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .place-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .place-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .place-card h3 {
+            padding: 15px;
+            font-size: 1.2rem;
+        }
+
+        .place-card p {
+            padding: 0 15px 15px;
+            color: #666;
+        }
+
+        /* Tour Highlights */
+        .highlights {
+            padding: 50px 0;
+            background-color: #f9f9f9;
+        }
+
+        .highlights-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .highlights-list li {
+            display: flex;
+            align-items: center;
+            font-size: 1.1rem;
+        }
+
+        .highlights-list i {
+            color: #FFD700;
+            margin-right: 10px;
+            font-size: 1.5rem;
+        }
+
+        /* Day Wise Itinerary */
+        .itinerary {
+            padding: 50px 0;
+        }
+
+        .accordion {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .accordion-item {
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        .accordion-header {
+            width: 100%;
+            padding: 15px;
+            background-color: #003366;
+            color: #fff;
+            border: none;
+            text-align: left;
+            font-size: 1.1rem;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .accordion-content {
+            display: none;
+            padding: 15px;
+            background-color: #f9f9f9;
+        }
+        
+        /* JavaScript toggle class */
+        .accordion-content.active {
+            display: block;
+        }
+
+        /* Departure Dates */
+        .dates {
+            padding: 50px 0;
+            background-color: #f9f9f9;
+        }
+
+        .dates-list {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .dates-list div {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .dates-list h3 {
+            color: #003366;
+            margin-bottom: 10px;
+        }
+
+        .note {
+            text-align: center;
+            font-weight: 600;
+            color: #FFD700;
+            margin-top: 20px;
+        }
+
+        /* Package Inclusions & Exclusions */
+        .inclusions, .exclusions {
+            padding: 50px 0;
+        }
+
+        .inclusions ul, .exclusions ul {
+            list-style: disc;
+            padding-left: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .inclusions ul li, .exclusions ul li {
+            margin-bottom: 10px;
+        }
+
+        /* Terms & Conditions */
+        .terms {
+            padding: 50px 0;
+            background-color: #f9f9f9;
+        }
+
+        .terms p {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: justify;
+        }
+
+        /* Contact & Footer */
+        .contact {
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .footer {
+            background-color: #003366;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                padding: 10px 20px;
+            }
+
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                margin-top: 10px;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .nav-menu li {
+                margin: 10px 0;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .overview-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .places-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .highlights-list {
+                grid-template-columns: 1fr;
+            }
+
+            .dates-list {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <h1>Maa Sonal Holidays</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#overview">Tour Overview</a></li>
+                <li><a href="#itinerary">Itinerary</a></li>
+                <li><a href="#inclusions">Inclusions</a></li>
+                <li><a href="#dates">Dates</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Manali Tour @ ₹12,999</h1>
+            <p>9 Nights / 10 Days Budget Himalayan Tour</p>
+            <p class="route">Ahmedabad → Amritsar → Manali → Solang → Kasol → Kullu → Ahmedabad</p>
+            <a href="#contact" class="cta-btn">Book Now</a>
+            <p class="contact-info">Call: +91 70167 16099</p>
+        </div>
+    </section>
+
+    <section id="overview" class="overview">
+        <div class="container">
+            <div class="overview-grid">
+                <div class="overview-text">
+                    <h2>Tour Overview</h2>
+                    <p>Embark on an unforgettable journey from Gujarat to the breathtaking landscapes of Himachal Pradesh with our Gujarat to Manali Super Saver Tour. Starting from Ahmedabad, this budget-friendly group tour takes you through Punjab and into the Himalayas, offering a mix of cultural heritage, snowy adventures, and serene valleys. Experience the Golden Temple's spiritual aura, the thrill of snow activities in Solang Valley, and the scenic beauty of places like Kasol and Kullu. Designed for travelers seeking value, this tour includes comfortable accommodations, guided sightseeing, and a dedicated tour manager to ensure a smooth experience.</p>
+                </div>
+                <div class="overview-image">
+                    <img src="images/himachal-landscape.jpg" alt="Scenic Himachal Pradesh landscape with mountains and valleys">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="places">
+        <div class="container">
+            <h2>Places Covered</h2>
+            <div class="places-grid">
+                <div class="place-card">
+                    <img src="images/ahmedabad.jpg" alt="Ahmedabad cityscape for departure point">
+                    <h3>Ahmedabad (Departure)</h3>
+                    <p>Starting point of the tour from Gujarat's vibrant capital.</p>
+                </div>
+                <div class="place-card">
+                    <img src="images/golden-temple.jpg" alt="Golden Temple in Amritsar">
+                    <h3>Amritsar – Golden Temple & Wagah Border</h3>
+                    <p>Visit the iconic Golden Temple and witness the Wagah Border ceremony.</p>
+                </div>
+                <div class="place-card">
+                    <img src="images/manali-town.jpg" alt="Manali town with mountains">
+                    <h3>Manali</h3>
+                    <p>Explore the picturesque hill station with temples and markets.</p>
+                </div>
+                <div class="place-card">
+                    <img src="images/solang-valley.jpg" alt="Solang Valley with snow">
+                    <h3>Solang Valley</h3>
+                    <p>Enjoy snow activities and panoramic views in this adventure hub.</p>
+                </div>
+                <div class="place-card">
+                    <img src="images/atal-tunnel.jpg" alt="Atal Tunnel entrance">
+                    <h3>Atal Tunnel</h3>
+                    <p>Experience India's longest highway tunnel through the mountains.</p>
+                </div>
+                <div class="place-card">
+                    <img src="images/sissu-valley.jpg" alt="Sissu Valley scenery">
+                    <h3>Sissu Valley</h3>
+                    <p>Stunning valley views and serene landscapes near Manali.</p>
+                </div>
+                <div class="place-card">
+                    <img src="images/kasol.jpg" alt="Kasol town by Parvati River">
+                    <h3>Kasol</h3>
+                    <p>Peaceful village in Parvati Valley, known for its cafes and nature.</p>
+                </div>
+                <div class="place-card">
+                    <img src="images/manikaran-sahib.jpg" alt="Manikaran Sahib Gurudwara">
+                    <h3>Manikaran Sahib</h3>
+                    <p>Sacred Gurudwara with hot water springs and spiritual significance.</p>
+                </div>
+                <div class="place-card">
+                    <img src="images/kullu-swiss-camp.jpg" alt="Kullu Swiss Camp tents">
+                    <h3>Kullu – Swiss Camp</h3>
+                    <p>Overnight stay in Swiss-style tents amidst apple orchards.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="highlights">
+        <div class="container">
+            <h2>Tour Highlights</h2>
+            <ul class="highlights-list">
+                <li><i class="fas fa-gopuram"></i> Golden Temple & Wagah Border Ceremony</li>
+                <li><i class="fas fa-snowflake"></i> Snow activities at Solang Valley</li>
+                <li><i class="fas fa-mountain"></i> Atal Tunnel & Sissu scenic views</li>
+                <li><i class="fas fa-tree"></i> Kasol Parvati Valley experience</li>
+                <li><i class="fas fa-hot-tub"></i> Manikaran hot water springs</li>
+                <li><i class="fas fa-campground"></i> Kullu Swiss Camp stay</li>
+                <li><i class="fas fa-shopping-bag"></i> Manali Mall Road shopping</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="itinerary" class="itinerary">
+        <div class="container">
+            <h2>Day Wise Itinerary</h2>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header">Day 1: Ahmedabad to Amritsar by train</button>
+                    <div class="accordion-content">
+                        <p>Depart from Ahmedabad by sleeper class train to Amritsar. Enjoy onboard facilities and prepare for the cultural journey ahead.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">Day 2: Golden Temple, Jallianwala Bagh & Wagah Border</button>
+                    <div class="accordion-content">
+                        <p>Visit the Golden Temple for a spiritual experience, explore Jallianwala Bagh Memorial, and witness the Wagah Border ceremony in the evening.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">Day 3: Amritsar to Manali (overnight journey)</button>
+                    <div class="accordion-content">
+                        <p>Travel from Amritsar to Manali by bus or taxi, with an overnight stay en route to acclimate to the mountain terrain.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">Day 4: Arrival in Manali, local sightseeing & Mall Road</button>
+                    <div class="accordion-content">
+                        <p>Arrive in Manali, check into hotel, and explore local attractions like Hadimba Temple and Mall Road for shopping and cafes.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">Day 5: Solang Valley – snow activities</button>
+                    <div class="accordion-content">
+                        <p>Head to Solang Valley for skiing, paragliding, and other snow-based adventures (weather permitting).</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">Day 6: Atal Tunnel, Sissu Valley & Vashisht hot springs</button>
+                    <div class="accordion-content">
+                        <p>Drive through the Atal Tunnel, enjoy Sissu Valley views, and relax in Vashisht's natural hot springs.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">Day 7: Manali to Kasol</button>
+                    <div class="accordion-content">
+                        <p>Travel to Kasol, settle in, and explore the Parvati Valley's cafes and riverside walks.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">Day 8: Kasol, Manikaran Sahib & Kullu Swiss Camp</button>
+                    <div class="accordion-content">
+                        <p>Visit Manikaran Sahib Gurudwara and hot springs, then proceed to Kullu for an overnight stay at Swiss Camp.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">Day 9: Return journey towards Ahmedabad</button>
+                    <div class="accordion-content">
+                        <p>Depart from Kullu towards Ahmedabad, with stops as needed for rest and meals.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">Day 10: Arrival Ahmedabad – tour ends</button>
+                    <div class="accordion-content">
+                        <p>Arrive back in Ahmedabad, concluding the tour with fond memories of the Himalayas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="dates" class="dates">
+        <div class="container">
+            <h2>Departure Dates</h2>
+            <div class="dates-list">
+                <div>
+                    <h3>February</h3>
+                    <p>1, 8, 10, 14, 17, 22, 24, 30</p>
+                </div>
+                <div>
+                    <h3>March</h3>
+                    <p>3, 10, 17, 24, 31</p>
+                </div>
+                <div>
+                    <h3>April</h3>
+                    <p>7, 14, 21, 28</p>
+                </div>
+            </div>
+            <p class="note">Limited seats available – Book early</p>
+        </div>
+    </section>
+
+    <section id="inclusions" class="inclusions">
+        <div class="container">
+            <h2>Package Inclusions</h2>
+            <ul>
+                <li>Sleeper class train tickets from Ahmedabad to Amritsar</li>
+                <li>Hotel accommodation in Amritsar, Manali, Kasol, and Kullu</li>
+                <li>Breakfast and Dinner during the tour</li>
+                <li>All sightseeing and transfers by private vehicle</li>
+                <li>Tour manager assistance throughout the journey</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="exclusions">
+        <div class="container">
+            <h2>Package Exclusions</h2>
+            <ul>
+                <li>Adventure activity charges (e.g., skiing, paragliding)</li>
+                <li>Personal expenses like laundry or tips</li>
+                <li>Camera fees at monuments</li>
+                <li>Meals not mentioned in inclusions</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="terms">
+        <div class="container">
+            <h2>Terms & Conditions</h2>
+            <p>The booking amount is non-refundable upon confirmation. Snow activities depend on weather conditions and may be subject to change. The itinerary may be altered due to road conditions, climate, or unforeseen circumstances. No refunds for unused services. A valid government-issued ID is mandatory for all participants. Maa Sonal Holidays reserves the right to modify terms without prior notice.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Maa Sonal Holidays</p>
+            <p>Phone: +91 70167 16099</p>
+            <a href="tel:+917016716099" class="cta-btn">Call Now to Book Your Seat</a>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 Maa Sonal Holidays. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Simple inline script to make accordion work if script.js is missing
+        document.querySelectorAll('.accordion-header').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                content.style.display = content.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+        
+        // Mobile Menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        if(hamburger) {
+            hamburger.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+        }
+    </script>
+</body>
+</html>
