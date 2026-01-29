@@ -103,28 +103,24 @@
         }
 
         /* Hero Section */
-        /* Update this section in your <style> tag */
-.hero {
-    /* 1. The linear-gradient creates a black see-through layer (0.5 opacity) 
-          so your white text pops out.
-       2. Replace 'hero-manali.jpg' with your actual downloaded image name.
-    */
-    background: linear-gradient(rgba(0, 51, 102, 0.6), rgba(0, 51, 102, 0.4)), 
-                url('images/bg.jpg');
-    
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover; /* Ensures image covers full area */
-    background-attachment: fixed; /* Creates a cool "parallax" scrolling effect */
-    
-    height: 60vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #fff;
-    position: relative;
-}
+        .hero {
+            /* PATH FIXED: Removed "images/" and absolute path. Pointing directly to hero-manali.jpg */
+            background: linear-gradient(rgba(0, 51, 102, 0.6), rgba(0, 51, 102, 0.4)), 
+                        url('hero-manali.jpg');
+            
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
 
         .hero-content h1 {
             font-size: 3rem;
@@ -266,7 +262,6 @@
             background-color: #f9f9f9;
         }
         
-        /* JavaScript toggle class */
         .accordion-content.active {
             display: block;
         }
@@ -429,7 +424,7 @@
                     <p>Embark on an unforgettable journey from Gujarat to the breathtaking landscapes of Himachal Pradesh with our Gujarat to Manali Super Saver Tour. Starting from Ahmedabad, this budget-friendly group tour takes you through Punjab and into the Himalayas, offering a mix of cultural heritage, snowy adventures, and serene valleys. Experience the Golden Temple's spiritual aura, the thrill of snow activities in Solang Valley, and the scenic beauty of places like Kasol and Kullu. Designed for travelers seeking value, this tour includes comfortable accommodations, guided sightseeing, and a dedicated tour manager to ensure a smooth experience.</p>
                 </div>
                 <div class="overview-image">
-                    <img src="images/himachal-landscape.jpg" alt="Scenic Himachal Pradesh landscape with mountains and valleys">
+                    <img src="himachal-landscape.jpg" alt="Scenic Himachal Pradesh landscape with mountains and valleys">
                 </div>
             </div>
         </div>
@@ -440,47 +435,47 @@
             <h2>Places Covered</h2>
             <div class="places-grid">
                 <div class="place-card">
-                    <img src="images/ahmedabad.jpg" alt="Ahmedabad cityscape for departure point">
+                    <img src="ahmedabad.jpg" alt="Ahmedabad cityscape for departure point">
                     <h3>Ahmedabad (Departure)</h3>
                     <p>Starting point of the tour from Gujarat's vibrant capital.</p>
                 </div>
                 <div class="place-card">
-                    <img src="images/golden-temple.jpg" alt="Golden Temple in Amritsar">
+                    <img src="golden-temple.jpg" alt="Golden Temple in Amritsar">
                     <h3>Amritsar – Golden Temple & Wagah Border</h3>
                     <p>Visit the iconic Golden Temple and witness the Wagah Border ceremony.</p>
                 </div>
                 <div class="place-card">
-                    <img src="images/manali-town.jpg" alt="Manali town with mountains">
+                    <img src="manali-town.jpg" alt="Manali town with mountains">
                     <h3>Manali</h3>
                     <p>Explore the picturesque hill station with temples and markets.</p>
                 </div>
                 <div class="place-card">
-                    <img src="images/solang-valley.jpg" alt="Solang Valley with snow">
+                    <img src="solang-valley.jpg" alt="Solang Valley with snow">
                     <h3>Solang Valley</h3>
                     <p>Enjoy snow activities and panoramic views in this adventure hub.</p>
                 </div>
                 <div class="place-card">
-                    <img src="images/atal-tunnel.jpg" alt="Atal Tunnel entrance">
+                    <img src="atal-tunnel.jpg" alt="Atal Tunnel entrance">
                     <h3>Atal Tunnel</h3>
                     <p>Experience India's longest highway tunnel through the mountains.</p>
                 </div>
                 <div class="place-card">
-                    <img src="images/sissu-valley.jpg" alt="Sissu Valley scenery">
+                    <img src="sissu-valley.jpg" alt="Sissu Valley scenery">
                     <h3>Sissu Valley</h3>
                     <p>Stunning valley views and serene landscapes near Manali.</p>
                 </div>
                 <div class="place-card">
-                    <img src="images/kasol.jpg" alt="Kasol town by Parvati River">
+                    <img src="kasol.jpg" alt="Kasol town by Parvati River">
                     <h3>Kasol</h3>
                     <p>Peaceful village in Parvati Valley, known for its cafes and nature.</p>
                 </div>
                 <div class="place-card">
-                    <img src="images/manikaran-sahib.jpg" alt="Manikaran Sahib Gurudwara">
+                    <img src="manikaran-sahib.jpg" alt="Manikaran Sahib Gurudwara">
                     <h3>Manikaran Sahib</h3>
                     <p>Sacred Gurudwara with hot water springs and spiritual significance.</p>
                 </div>
                 <div class="place-card">
-                    <img src="images/kullu-swiss-camp.jpg" alt="Kullu Swiss Camp tents">
+                    <img src="kullu-swiss-camp.jpg" alt="Kullu Swiss Camp tents">
                     <h3>Kullu – Swiss Camp</h3>
                     <p>Overnight stay in Swiss-style tents amidst apple orchards.</p>
                 </div>
@@ -638,13 +633,13 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
     <script>
-        // Simple inline script to make accordion work if script.js is missing
+        // Inline script for accordion and mobile menu
         document.querySelectorAll('.accordion-header').forEach(button => {
             button.addEventListener('click', () => {
                 const content = button.nextElementSibling;
-                content.style.display = content.style.display === 'block' ? 'none' : 'block';
+                // Toggle active class for smooth display handling
+                content.classList.toggle('active');
             });
         });
         
