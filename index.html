@@ -34,6 +34,7 @@
             color: #003366; 
         }
 
+        /* Button Styles */
         .cta-btn {
             display: inline-block;
             background-color: #FFD700; /* Yellow accent */
@@ -43,10 +44,25 @@
             border-radius: 5px;
             font-weight: 600;
             transition: background-color 0.3s;
+            margin: 5px; /* Added spacing if buttons are side-by-side */
+            border: none;
+            cursor: pointer;
         }
 
         .cta-btn:hover {
             background-color: #87CEEB; /* Sky Blue on hover */
+        }
+
+        /* Secondary Button (for Phone Call) */
+        .cta-btn-secondary {
+            background-color: #fff;
+            color: #003366;
+            border: 2px solid #003366;
+        }
+        
+        .cta-btn-secondary:hover {
+            background-color: #003366;
+            color: #fff;
         }
 
         /* Header & Navbar */
@@ -305,7 +321,7 @@
             padding: 50px 0;
         }
 
-        /* ALIGNMENT FIX: Center the headings for these sections to match the lists */
+        /* ALIGNMENT FIX: Center the headings */
         .inclusions h2, .exclusions h2, .terms h2 {
             text-align: center;
             margin-bottom: 30px;
@@ -316,7 +332,7 @@
             background-color: #f9f9f9;
         }
 
-        /* Shared styling for the Bullet Lists (Centers the block) */
+        /* Shared styling for the Bullet Lists */
         .inclusions ul, .exclusions ul, .terms ul {
             list-style: disc;       /* Standard bullet points */
             padding-left: 20px;     /* Indent bullets */
@@ -325,7 +341,6 @@
             text-align: left;       /* Keep the text left-aligned inside the block */
         }
 
-        /* Space between items */
         .inclusions ul li, .exclusions ul li, .terms ul li {
             margin-bottom: 10px;
         }
@@ -418,7 +433,9 @@
             <h1>Manali Tour @ ₹12,999</h1>
             <p>9 Nights / 10 Days Budget Himalayan Tour</p>
             <p class="route">Ahmedabad → Amritsar → Manali → Solang → Kasol → Kullu → Ahmedabad</p>
-            <a href="#contact" class="cta-btn">Book Now</a>
+            
+            <a href="https://forms.gle/YOUR_LINK_HERE" target="_blank" class="cta-btn">Book Now</a>
+            
             <p class="contact-info">Call: +91 70167 16099</p>
         </div>
     </section>
@@ -472,7 +489,7 @@
                     <p>Stunning valley views and serene landscapes near Manali.</p>
                 </div>
                 <div class="place-card">
-                    <img src="pvkasol.jpg" alt="Kasol town by Parvati River">
+                    <img src="kasol.jpg" alt="Kasol town by Parvati River">
                     <h3>Kasol</h3>
                     <p>Peaceful village in Parvati Valley, known for its cafes and nature.</p>
                 </div>
@@ -638,9 +655,13 @@
             <h2>Contact Us</h2>
             <p>Maa Sonal Holidays</p>
             <p>Phone: +91 70167 16099</p>
-            <a href="tel:+917016716099" class="cta-btn">Call Now to Book Your Seat</a>
+            <br>
+            <a href="https://forms.gle/YOUR_LINK_HERE" target="_blank" class="cta-btn">Fill Booking Form</a>
+            
+            <a href="tel:+917016716099" class="cta-btn cta-btn-secondary">Call Now</a>
         </div>
     </section>
+
     <footer class="footer">
         <div class="container">
             <p>&copy; 2026 Maa Sonal Holidays. All rights reserved.</p>
@@ -668,4 +689,3 @@
     </script>
 </body>
 </html>
-
