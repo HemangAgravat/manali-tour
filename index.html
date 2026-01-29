@@ -29,8 +29,9 @@
             padding: 0 20px;
         }
 
+        /* Standard Headers are Blue */
         h1, h2, h3 {
-            color: #003366; /* Navy Blue */
+            color: #003366; 
         }
 
         .cta-btn {
@@ -105,7 +106,7 @@
         /* Hero Section */
         .hero {
             background: linear-gradient(rgba(0, 51, 102, 0.6), rgba(0, 51, 102, 0.4)), 
-                        url('hero-manali.jpg');
+                        url('hero-bg.jpg');
             
             background-position: center center;
             background-repeat: no-repeat;
@@ -121,10 +122,12 @@
             position: relative;
         }
 
+        /* FORCE YELLOW COLOR HERE */
         .hero-content h1 {
             font-size: 3rem;
             margin-bottom: 10px;
-            color: #FFD700; /* COLOR CHANGED TO YELLOW ACCENT HERE */
+            color: #FFD700 !important; /* 'Important' forces the browser to use this color */
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.6); /* Adds shadow so yellow is readable */
         }
 
         .hero-content p {
