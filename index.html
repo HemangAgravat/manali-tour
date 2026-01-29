@@ -78,6 +78,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 15px 20px;
+            flex-wrap: wrap; /* Allows menu to drop to next line on mobile */
         }
 
         .logo h1 {
@@ -316,29 +317,25 @@
 
         /* === PACKAGE LISTS (Inclusions, Exclusions, Terms) === */
         
-        /* Shared spacing */
         .inclusions, .exclusions, .terms {
             padding: 50px 0;
         }
 
-        /* ALIGNMENT FIX: Center the headings */
         .inclusions h2, .exclusions h2, .terms h2 {
             text-align: center;
             margin-bottom: 30px;
         }
 
-        /* Terms specific: Add grey background */
         .terms {
             background-color: #f9f9f9;
         }
 
-        /* Shared styling for the Bullet Lists */
         .inclusions ul, .exclusions ul, .terms ul {
-            list-style: disc;       /* Standard bullet points */
-            padding-left: 20px;     /* Indent bullets */
-            max-width: 600px;       /* Limit width for readability */
-            margin: 0 auto;         /* Center the list block on screen */
-            text-align: left;       /* Keep the text left-aligned inside the block */
+            list-style: disc;
+            padding-left: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
         }
 
         .inclusions ul li, .exclusions ul li, .terms ul li {
@@ -358,18 +355,19 @@
             padding: 20px 0;
         }
 
-        /* Mobile Responsiveness */
+        /* Mobile Responsiveness - THE FIX IS HERE */
         @media (max-width: 768px) {
             .navbar {
-                flex-direction: column;
-                padding: 10px 20px;
+                /* We removed 'flex-direction: column' so items stay side-by-side */
+                padding: 15px 20px;
             }
 
             .nav-menu {
                 display: none;
                 flex-direction: column;
-                width: 100%;
-                margin-top: 10px;
+                width: 100%; /* Forces menu to take full width on new line */
+                margin-top: 15px;
+                text-align: center;
             }
 
             .nav-menu.active {
@@ -412,6 +410,13 @@
             <div class="logo">
                 <h1>Maa Sonal Holidays</h1>
             </div>
+            
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
             <ul class="nav-menu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#overview">Tour Overview</a></li>
@@ -420,11 +425,6 @@
                 <li><a href="#dates">Dates</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
         </nav>
     </header>
 
@@ -689,4 +689,3 @@
     </script>
 </body>
 </html>
-
